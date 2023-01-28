@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+            align-items: center;
+            justify-content: center;
+            font-family: "poppins", sans-serif;
+        }
+        .backgr
+        {
+            background: linear-gradient(to right, #000985,#1d65ff);
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 60px;
+        }
+        .head
+        {
+            padding-left: 12%;
+            padding-top: 60px;
+            padding-right: 12%;
+            background: linear-gradient(to right, #000985,#1d65ff);
+            color: white;
+        }
+        
+        input,
+        textarea {
+            padding: 15px;
+            margin: 10px 20px 25px 0px;
+            outline: none;
+            width: 80%;
+            border: 1px solid #ccc;
+            }
+
+        textarea {
+            resize: vertical;
+            }
+        .firstpart
+            {
+            font-size: 22px;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 40px;
+            background:white;
+
+            }
+        button {
+            outline: none;
+            background: white;
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 10px;
+            color: gray;
+            cursor: polong long long long inter;
+            transition: all 0.3s;
+            }
+
+        button:hover {
+            color: black;
+            }
+
+            .secondpart
+            {
+            font-size: 22px;
+            margin-left: 5%;
+            padding-right: 5%;
+            background:white;
+            padding-bottom: 40px;
+            
+            }
+            .second{
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 159px;
+            }
+            .sec{
+                border-left: 1px solid rgb(228, 228, 228);
+                border-right: 1px solid rgb(228, 228, 228);
+                border-bottom: 1px solid rgb(228, 228, 228);
+            }
+            
+
+    </style>
+</head>
+<body>
+    
+        <div class="head"><span class = "logo"><img src = "softech_logo.png" width = "4%" style = "float:left"><span style = "font-size: 22px; font-family: cursive;">SOFTECH</span></span><br><br><br><br>
+            <h2 style = "font-size: 28px">Tell us what you need done</h2><br><br><span style = "font-size: 18px">Give us a detailed description about your project. We are here to get it done for you. Pay us only when you are fully satisfied with our work.</span></div>
+        
+            <!-- Header -->
+            
+               
+            <div class = "form">
+            <div class = "backgr">
+            
+    
+            <!-- Main Form Started -->
+            <div class = "firstpart">
+            <label for="fullName"><b>Name of your Organisation:</b><span style = "color: red">*</span></label><br>
+            <input type="text" id = "name" placeholder="Full Name" name="name"><br>
+    
+            <label for="email"><b>Email:</b><span style = "color: red">*</span></label><br></div>
+            </div>
+
+
+            <div class = "second">
+                <div class = "sec">
+            <div class = "secondpart">
+            <input type="email" id = "email" placeholder="abcd@xyz.com" name="email"><br>
+            <label for="subject"><b>Budget:</b></label><br>
+            <input type="subject" id = "budget" placeholder="eg:- 3000 USD" name="text"><br>
+          
+            <label for="message"><b>Project Detail:</b><span style = "color: red">*</span></label><br>
+            <input type = "text" id = "detail" placeholder="Your Description Here" name="message"><br>
+    
+            <!-- Submit Button -->
+            <center><button id = "send"><span style = "font-size: 18px;">Submit</span></button></center></div></div></div>
+    
+            </div>
+    
+    <script>
+        document.getElementById("send").addEventListener("click", () => {
+            console.log("pressed");
+            //const name = document.getElementById("name").value;
+            //const email = document.getElementById("email").value;
+            //const budget = document.getElementById("budget").value;
+            //const detail = document.getElementById("detail").value;
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "softech256@gmail.com",
+                Password: "B1B7F32749B1D764B01982A84953A5B89317",
+                To: "ankit11hab@outlook.com",
+                From: "softech256@gmail.com",
+                Subject: `af has posted a project!`,
+                Body: `hfchcgfhcfgghc`,
+            }).then((message) => alert("Your project has been posted!"));
+        });
+        function myfunc(e) {
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>
